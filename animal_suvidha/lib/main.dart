@@ -13,6 +13,8 @@ import 'package:animal_suvidha/donate.dart';
 import 'package:animal_suvidha/my_pet.dart';
 import 'package:animal_suvidha/report_injury.dart';
 import 'package:animal_suvidha/pre_loader.dart';
+import 'package:animal_suvidha/slider1.dart';
+import 'package:animal_suvidha/home1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +27,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SignUpScreen(),
+        home: Slider1(),
+        //SignUpScreen(),
         routes: {
           '/home_page': (context) => HomePage(),
           '/donate': (context) => Donate(),
@@ -41,6 +44,8 @@ class MyApp extends StatelessWidget {
           '/sign_up_screen': (context) => SignUpScreen(),
           'complete_profile_screen': (context) => CompleteProfileScreen(),
           'otp': (context) => OtpForm(),
+          'silder': (context) => Slider1(),
+          'home1': (context) => Home(),
         });
   }
 }

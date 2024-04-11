@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var date = DateTime.now();
+    
     return Scaffold(
       // backgroundColor: Colors.blue[800],
       bottomNavigationBar: BottomNavigationBar(items: [
@@ -30,12 +31,13 @@ class _HomePageState extends State<HomePage> {
       ]),
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
-              image: new AssetImage(
-                  "assets/images/Black and grey paw print pattern Art Print by gulsengunel.jpg"),
-              fit: BoxFit.cover,
-              colorFilter: new ColorFilter.mode(
-                  Colors.black.withOpacity(0.3), BlendMode.dstATop)),
+          color: Colors.blue,
+          // image: DecorationImage(
+          //     image: new AssetImage(
+          //         "assets/images/Black and grey paw print pattern Art Print by gulsengunel.jpg"),
+          //     fit: BoxFit.cover,
+          //     colorFilter: new ColorFilter.mode(
+          //         Colors.black.withOpacity(0.3), BlendMode.dstATop)),
         ),
         child: SafeArea(
           child: Column(
