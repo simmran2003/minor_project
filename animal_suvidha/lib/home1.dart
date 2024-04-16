@@ -1,7 +1,9 @@
 import 'package:animal_suvidha/util/pop_up.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:animal_suvidha/my_pet.dart';
+import 'package:animal_suvidha/util/emoticon_face.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -16,11 +18,13 @@ class _HomeState extends State<Home> {
     var date = DateTime.now();
     var i = ['SOS', 'Report an Injury', 'Donate'];
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-        BottomNavigationBarItem(icon: Icon(Icons.message), label: ''),
-        BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
-      ]),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.message), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+        ],
+      ),
       body: Container(
         decoration: BoxDecoration(
           color: Colors.white,
@@ -38,7 +42,7 @@ class _HomeState extends State<Home> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Hi, Jared!",
+                            "Hi, Simmran!",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 24,
@@ -87,20 +91,29 @@ class _HomeState extends State<Home> {
                       Container(
                         height: 100,
                         width: 100,
-                        color: Colors.amber,
                         decoration: BoxDecoration(
-                          color: Colors.grey[300],
-                          borderRadius: BorderRadius.circular(12),
-                        ),
+                            color: Colors.orange[400],
+                            borderRadius: BorderRadius.circular(12)),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(15),
                           child: Container(
                             height: 20,
                             width: 20,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
                             padding: EdgeInsets.all(2),
-                            child: Icon(
-                              Icons.person,
-                              color: Colors.white,
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const MyPet()),
+                                );
+                              },
+                              child: EmoticonFace(
+                                emoticonFace: '🐶',
+                              ),
                             ),
                           ),
                         ),
@@ -111,20 +124,29 @@ class _HomeState extends State<Home> {
                       Container(
                         height: 100,
                         width: 100,
-                        color: Colors.amber,
+                        decoration: BoxDecoration(
+                            color: Colors.orange[400],
+                            borderRadius: BorderRadius.circular(12)),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(15),
                           child: Container(
                             height: 20,
                             width: 20,
                             decoration: BoxDecoration(
-                              color: Colors.grey[300],
                               borderRadius: BorderRadius.circular(12),
                             ),
                             padding: EdgeInsets.all(2),
-                            child: Icon(
-                              Icons.person,
-                              color: Colors.white,
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const MyPet()),
+                                );
+                              },
+                              child: EmoticonFace(
+                                emoticonFace: '🆘',
+                              ),
                             ),
                           ),
                         ),
@@ -135,23 +157,69 @@ class _HomeState extends State<Home> {
                       Container(
                         height: 100,
                         width: 100,
-                        color: Colors.amber,
+                        decoration: BoxDecoration(
+                            color: Colors.orange[400],
+                            borderRadius: BorderRadius.circular(12)),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(15),
                           child: Container(
                             height: 20,
                             width: 20,
                             decoration: BoxDecoration(
-                              color: Colors.grey[300],
                               borderRadius: BorderRadius.circular(12),
                             ),
                             padding: EdgeInsets.all(2),
-                            child: Icon(
-                              Icons.person,
-                              color: Colors.white,
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const MyPet()),
+                                );
+                              },
+                              child: EmoticonFace(
+                                emoticonFace: '💵',
+                              ),
                             ),
                           ),
                         ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 30,
+                      ),
+                      Text(
+                        'My Pet',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: GoogleFonts.lato().fontFamily),
+                      ),
+                      SizedBox(
+                        width: 45,
+                      ),
+                      Text(
+                        'Report an injury',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: GoogleFonts.lato().fontFamily),
+                      ),
+                      SizedBox(
+                        width: 43,
+                      ),
+                      Text(
+                        'Donate',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: GoogleFonts.lato().fontFamily),
                       ),
                     ],
                   ),
@@ -175,7 +243,7 @@ class _HomeState extends State<Home> {
                                 width: MediaQuery.of(context).size.width,
                                 margin: EdgeInsets.symmetric(horizontal: 5),
                                 decoration: BoxDecoration(
-                                  color: Colors.amber,
+                                  color: Colors.orange[400],
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Center(

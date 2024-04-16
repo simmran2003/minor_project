@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
-import '../sign_up_screen.dart';
+import 'package:animal_suvidha/sign_up_screen.dart';
 
 class NoAccountText extends StatelessWidget {
   const NoAccountText({
@@ -18,7 +18,13 @@ class NoAccountText extends StatelessWidget {
           style: TextStyle(fontSize: 16),
         ),
         GestureDetector(
-          onTap: () => Navigator.pushNamed(context, SignUpScreen.routeName),
+          onTap: () {
+            // Navigate to a new route
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SignUpScreen()),
+            );
+          },
           child: const Text(
             "Sign Up",
             style: TextStyle(fontSize: 16, color: kPrimaryColor),

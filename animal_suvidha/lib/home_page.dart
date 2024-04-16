@@ -1,3 +1,6 @@
+//NOT IN USE
+//TO BE DISCARDED
+
 import 'package:animal_suvidha/donate.dart';
 import 'package:animal_suvidha/report_injury.dart';
 import 'package:animal_suvidha/util/emoticon_face.dart';

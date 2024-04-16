@@ -16,7 +16,7 @@ class PopUp extends StatelessWidget {
       ),
       child: Container(
         decoration: BoxDecoration(
-            color: Colors.grey[400], borderRadius: BorderRadius.circular(12)),
+            color: Colors.orange, borderRadius: BorderRadius.circular(12)),
         padding: EdgeInsets.all(12),
         child: Icon(
           Icons.person,

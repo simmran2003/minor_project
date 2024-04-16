@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:animal_suvidha/home1.dart';
 
 class MyPet extends StatelessWidget {
   const MyPet({Key? key}) : super(key: key);
@@ -10,7 +11,10 @@ class MyPet extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/home_page');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Home()),
+              );
             },
             child: Icon(Icons.home)),
       ),

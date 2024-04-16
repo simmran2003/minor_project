@@ -20,7 +20,7 @@ class MenuItems extends StatelessWidget {
           child: Container(
             height: 50,
             width: 150,
-            color: Colors.grey[300],
+            color: Colors.orange[200],
             child: Align(
               alignment: Alignment.center,
               child: Text(
@@ -40,7 +40,7 @@ class MenuItems extends StatelessWidget {
           child: Container(
             height: 50,
             width: 150,
-            color: Colors.grey[350],
+            color: Colors.orange[400],
             child: Align(
               alignment: Alignment.center,
               child: Text("My Profile",

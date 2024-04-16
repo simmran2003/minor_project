@@ -1,5 +1,6 @@
-import 'dart:html';
-
+import 'package:animal_suvidha/sign_in_screen.dart';
+import 'package:animal_suvidha/sign_up_screen.dart';
+import 'package:animal_suvidha/util/init_screen.dart';
 import 'package:flutter/material.dart';
 
 class Slider1 extends StatelessWidget {
@@ -46,7 +47,7 @@ class Slider1 extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8),
+                padding: const EdgeInsets.all(0),
                 child: Text(
                   "Looking for additional love?Visit the shelter today",
                   textAlign: TextAlign.center,
@@ -57,19 +58,41 @@ class Slider1 extends StatelessWidget {
                       fontStyle: FontStyle.normal),
                 ),
               ),
-              SizedBox(
-                height: 20.0,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(15),
-                child: Container(
-                  height: 50,
-                  width: 150,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
+              Container(
+                height: 20,
+                width: 150,
+                decoration: BoxDecoration(
+                  color: Colors.white,
                 ),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignInScreen()),
+                  );
+                },
+                child: Row(
+                  children: [
+                    Text(
+                      "Adopt a Pet",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                      ),
+                    ),
+                    SizedBox(width: 12),
+                    Icon(
+                      Icons.pets,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orange,
+                  fixedSize: Size(190, 50),
+                ),
+              )
             ],
           ),
         ),
