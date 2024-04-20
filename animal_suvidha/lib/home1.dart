@@ -34,20 +34,6 @@ class _HomeState extends State<Home> {
               MaterialPageRoute(builder: (context) => MyProfile()),
             );
           }
-        onTap: (index) async{
-          try{
-                dynamic conversationObject = {
-     'appId': '<APP_ID>',// The [APP_ID](https://dashboard.kommunicate.io/settings/install) obtained from kommunicate dashboard.
-     };
-
-    KommunicateFlutterPlugin.buildConversation(conversationObject)
-        .then((clientConversationId) {
-      print("Conversation builder success : " + clientConversationId.toString());
-    }).catchError((error) {
-      print("Conversation builder error : " + error.toString());
-    });
-          }
-        };
         },
       ),
       body: Container(
