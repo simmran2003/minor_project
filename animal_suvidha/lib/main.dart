@@ -2,7 +2,6 @@
 import 'package:animal_suvidha/complete_profile_screen.dart';
 import 'package:animal_suvidha/forgot_password_screen.dart';
 import 'package:animal_suvidha/login_success_screen.dart';
-import 'package:animal_suvidha/messages.dart';
 import 'package:animal_suvidha/my_profile.dart';
 import 'package:animal_suvidha/sign_in_screen.dart';
 import 'package:animal_suvidha/sign_up_screen.dart';
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Dialog(),
+        home: Home(),
         //SignUpScreen(),
         routes: {
           '/home_page': (context) => HomePage(),
@@ -46,7 +45,6 @@ class MyApp extends StatelessWidget {
           'otp': (context) => OtpForm(),
           'silder': (context) => Slider1(),
           'home1': (context) => Home(),
-          'dialog': (context) => Dialog(),
         });
   }
 }

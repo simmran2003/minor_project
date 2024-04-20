@@ -1,9 +1,11 @@
+import 'package:animal_suvidha/my_profile.dart';
 import 'package:animal_suvidha/util/pop_up.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:animal_suvidha/my_pet.dart';
 import 'package:animal_suvidha/util/emoticon_face.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kommunicate_flutter/kommunicate_flutter.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -20,10 +22,33 @@ class _HomeState extends State<Home> {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.message), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.message), label: 'ChatBot'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person), label: 'My Profile'),
         ],
+        onTap: (index) {
+          if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MyProfile()),
+            );
+          }
+        onTap: (index) async{
+          try{
+                dynamic conversationObject = {
+     'appId': '<APP_ID>',// The [APP_ID](https://dashboard.kommunicate.io/settings/install) obtained from kommunicate dashboard.
+     };
+
+    KommunicateFlutterPlugin.buildConversation(conversationObject)
+        .then((clientConversationId) {
+      print("Conversation builder success : " + clientConversationId.toString());
+    }).catchError((error) {
+      print("Conversation builder error : " + error.toString());
+    });
+          }
+        };
+        },
       ),
       body: Container(
         decoration: BoxDecoration(

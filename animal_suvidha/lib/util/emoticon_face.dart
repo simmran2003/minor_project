@@ -10,7 +10,7 @@ class EmoticonFace extends StatelessWidget {
     return Center(
       child: Container(
         decoration: BoxDecoration(
-            color: Colors.orange[200], borderRadius: BorderRadius.circular(12)),
+            color: Colors.white, borderRadius: BorderRadius.circular(12)),
         padding: EdgeInsets.all(10),
         child: Center(
           child: Text(
