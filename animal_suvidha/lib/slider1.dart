@@ -1,6 +1,4 @@
 import 'package:animal_suvidha/sign_in_screen.dart';
-import 'package:animal_suvidha/sign_up_screen.dart';
-import 'package:animal_suvidha/util/init_screen.dart';
 import 'package:flutter/material.dart';
 
 class Slider1 extends StatelessWidget {
@@ -37,7 +35,7 @@ class Slider1 extends StatelessWidget {
                 height: 40.0,
               ),
               Text(
-                "Proud to Be A Pet Adopter",
+                "Every Life Matters:",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.black,
@@ -49,10 +47,10 @@ class Slider1 extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(0),
                 child: Text(
-                  "Looking for additional love?Visit the shelter today",
+                  "Uniting for the Well-being of Injured Wildlife",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: Colors.grey[400],
+                      color: Colors.grey[600],
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.normal),
@@ -74,14 +72,15 @@ class Slider1 extends StatelessWidget {
                 },
                 child: Row(
                   children: [
+                    SizedBox(width: 10),
                     Text(
-                      "Adopt a Pet",
+                      "Save a life",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
                       ),
                     ),
-                    SizedBox(width: 12),
+                    SizedBox(width: 16),
                     Icon(
                       Icons.pets,
                       color: Colors.white,

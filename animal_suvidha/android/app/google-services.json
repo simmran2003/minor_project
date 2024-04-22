@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "248140694812",
+    "project_id": "animal-suvidha-25cea",
+    "storage_bucket": "animal-suvidha-25cea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248140694812:android:68522384fca4755ba8a6d9",
+        "android_client_info": {
+          "package_name": "com.example.animal_suvidha"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHTsIDvskpCKTfgApkZJoiAVm6KSNGU-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

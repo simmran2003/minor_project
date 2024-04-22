@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:animal_suvidha/my_pet.dart';
 import 'package:animal_suvidha/util/emoticon_face.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kommunicate_flutter/kommunicate_flutter.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -18,17 +17,16 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     var date = DateTime.now();
-    var i = ['SOS', 'Report an Injury', 'Donate'];
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.message), label: 'ChatBot'),
+          // BottomNavigationBarItem(icon: Icon(Icons.message), label: 'ChatBot'),
           BottomNavigationBarItem(
               icon: Icon(Icons.person), label: 'My Profile'),
         ],
         onTap: (index) {
-          if (index == 2) {
+          if (index == 1) {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => MyProfile()),
@@ -249,8 +247,8 @@ class _HomeState extends State<Home> {
                             color: Colors.white,
                           ),
                           child: CarouselSlider(
-                            items: [1, 2, 3].map((i) {
-                              return Container(
+                            items: [
+                              Container(
                                 width: MediaQuery.of(context).size.width,
                                 margin: EdgeInsets.symmetric(horizontal: 5),
                                 decoration: BoxDecoration(
@@ -258,10 +256,39 @@ class _HomeState extends State<Home> {
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Center(
-                                  child: Text("text \\\\\\\$i"),
+                                  child: Text(
+                                    "Having a hard time keeping track of your pets vaccines? Animal Suvidha is to the rescue with scheduling appointments and keep up with your pet's daily needs",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                    ),
+                                  ),
                                 ),
-                              );
-                            }).toList(),
+                              ),
+                              Container(
+                                width: MediaQuery.of(context).size.width,
+                                margin: EdgeInsets.symmetric(horizontal: 5),
+                                decoration: BoxDecoration(
+                                  color: Colors.orange[400],
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                      "A Helping Hand Matters: Whether it's bandaging a wound, providing water, or calling for professional help, every gesture of assistance counts."),
+                                ),
+                              ),
+                              Container(
+                                width: MediaQuery.of(context).size.width,
+                                margin: EdgeInsets.symmetric(horizontal: 5),
+                                decoration: BoxDecoration(
+                                  color: Colors.orange[400],
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Center(
+                                  child: Text("Text 3"),
+                                ),
+                              ),
+                            ],
                             options: CarouselOptions(
                               height: 300,
                             ),

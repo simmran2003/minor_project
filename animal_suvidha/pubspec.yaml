@@ -44,7 +44,8 @@ dependencies:
   flutter_svg: ^2.0.10+1
   carousel_slider: ^4.2.1
   geolocator: ^11.0.0
-  kommunicate_flutter: ^1.8.4
+  firebase_core: ^2.30.0
+  firebase_auth: ^4.19.2
 
   
 
@@ -81,7 +82,6 @@ flutter:
     - assets/icons/google-icon.svg
     - assets/icons/facebook-2.svg
     - assets/icons/twitter.svg
-    - assets/dialog_flow_auth.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

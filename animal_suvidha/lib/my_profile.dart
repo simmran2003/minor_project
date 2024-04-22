@@ -69,15 +69,15 @@ class MyProfile extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(15),
-                  ),
-                  child: const Text('Edit Profile')),
-            )
+            // SizedBox(
+            //   width: double.infinity,
+            //   child: ElevatedButton(
+            //       onPressed: () {},
+            //       style: ElevatedButton.styleFrom(
+            //         padding: const EdgeInsets.all(15),
+            //       ),
+            //       child: const Text('Edit Profile')),
+            // )
           ],
         ),
       ),

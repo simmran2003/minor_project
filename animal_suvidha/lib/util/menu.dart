@@ -1,6 +1,6 @@
-import 'package:animal_suvidha/login_success_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:animal_suvidha/my_profile.dart';
+import 'package:animal_suvidha/sign_in_screen.dart';
 
 class MenuItems extends StatelessWidget {
   const MenuItems({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class MenuItems extends StatelessWidget {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => LoginSuccessScreen()),
+              MaterialPageRoute(builder: (context) => SignInScreen()),
             );
           },
           child: Container(

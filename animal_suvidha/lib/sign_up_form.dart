@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../../../util/custom_surfix_icon.dart';
 import '../../../util/form_error.dart';
 import '../../../constants.dart';
-import 'package:animal_suvidha/home_page.dart';
+import 'package:animal_suvidha/home1.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
@@ -143,7 +143,10 @@ class _SignUpFormState extends State<SignUpForm> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen
-                Navigator.pushNamed(context, '/home_page');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Home()),
+                );
               }
             },
             child: const Text("Continue"),

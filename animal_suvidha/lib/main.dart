@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, unused_import, duplicate_import, equal_keys_in_map
 import 'package:animal_suvidha/complete_profile_screen.dart';
+import 'package:animal_suvidha/firebase_options.dart';
 import 'package:animal_suvidha/forgot_password_screen.dart';
 import 'package:animal_suvidha/login_success_screen.dart';
 import 'package:animal_suvidha/my_profile.dart';
@@ -7,6 +8,7 @@ import 'package:animal_suvidha/sign_in_screen.dart';
 import 'package:animal_suvidha/sign_up_screen.dart';
 import 'package:animal_suvidha/util/init_screen.dart';
 import 'package:animal_suvidha/util/otp_form.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:animal_suvidha/home_page.dart';
 import 'package:animal_suvidha/donate.dart';
@@ -15,8 +17,11 @@ import 'package:animal_suvidha/report_injury.dart';
 import 'package:animal_suvidha/pre_loader.dart';
 import 'package:animal_suvidha/slider1.dart';
 import 'package:animal_suvidha/home1.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -27,7 +32,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Home(),
+        home: StreamBuilder(
+            stream: FirebaseAuth.instance.authStateChanges(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return Home();
+              } else {
+                return SignInScreen();
+              }
+            }),
+
         //SignUpScreen(),
         routes: {
           '/home_page': (context) => HomePage(),
