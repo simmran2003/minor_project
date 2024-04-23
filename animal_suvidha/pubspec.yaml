@@ -46,6 +46,9 @@ dependencies:
   geolocator: ^11.0.0
   firebase_core: ^2.30.0
   firebase_auth: ^4.19.2
+  google_sign_in: ^6.1.6
+  cloud_firestore: ^4.13.1
+  the_apple_sign_in: ^1.1.1
 
   
 

@@ -256,11 +256,17 @@ class _HomeState extends State<Home> {
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Center(
-                                  child: Text(
-                                    "Having a hard time keeping track of your pets vaccines? Animal Suvidha is to the rescue with scheduling appointments and keep up with your pet's daily needs",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.white,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(14.0),
+                                    child: Text(
+                                      "Having a hard time keeping track of your pets vaccines? Animal Suvidha is to the rescue with scheduling appointments and keep up with your pet's daily needs",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                        fontFamily:
+                                            GoogleFonts.lato().fontFamily,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -273,8 +279,19 @@ class _HomeState extends State<Home> {
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Center(
-                                  child: Text(
-                                      "A Helping Hand Matters: Whether it's bandaging a wound, providing water, or calling for professional help, every gesture of assistance counts."),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(14.0),
+                                    child: Text(
+                                      "A Helping Hand Matters: Whether it's bandaging a wound, providing water, or calling for professional help, every gesture of assistance counts.",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                        fontFamily:
+                                            GoogleFonts.lato().fontFamily,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                               Container(

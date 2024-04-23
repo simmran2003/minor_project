@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors, unused_import, duplicate_import, equal_keys_in_map
 import 'package:animal_suvidha/complete_profile_screen.dart';
 import 'package:animal_suvidha/firebase_options.dart';
+import 'package:animal_suvidha/forgot_password.dart';
 import 'package:animal_suvidha/forgot_password_screen.dart';
+import 'package:animal_suvidha/login.dart';
 import 'package:animal_suvidha/login_success_screen.dart';
 import 'package:animal_suvidha/my_profile.dart';
 import 'package:animal_suvidha/sign_in_screen.dart';
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
               if (snapshot.hasData) {
                 return Home();
               } else {
-                return SignInScreen();
+                return LogIn();
               }
             }),
 
@@ -59,6 +61,8 @@ class MyApp extends StatelessWidget {
           'otp': (context) => OtpForm(),
           'silder': (context) => Slider1(),
           'home1': (context) => Home(),
+          'login': (context) => LogIn(),
+          'forgot_password': (context) => ForgotPassword(),
         });
   }
 }
