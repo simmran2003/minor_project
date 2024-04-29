@@ -20,7 +20,7 @@ class _SignUpState extends State<SignUp> {
 
   final _formkey = GlobalKey<FormState>();
 
-  registration() async {
+  void registration() async {
     if (password != null &&
         namecontroller.text != "" &&
         mailcontroller.text != "") {
@@ -160,8 +160,9 @@ class _SignUpState extends State<SignUp> {
                             name = namecontroller.text;
                             password = passwordcontroller.text;
                           });
+                          registration();  // correct place of calling the function, working
                         }
-                        registration();
+                        registration();  // you are calling here outside of if
                       },
                       child: Container(
                           width: MediaQuery.of(context).size.width,
