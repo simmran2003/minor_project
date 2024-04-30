@@ -22,7 +22,7 @@ class _LogInState extends State<LogIn> {
 
   final _formkey = GlobalKey<FormState>();
 
-  userLogin() async {
+  void userLogin() async {
     print("function called");
     try {
       await FirebaseAuth.instance
@@ -128,8 +128,11 @@ class _LogInState extends State<LogIn> {
                             email = mailcontroller.text;
                             password = passwordcontroller.text;
                           });
+
+                          userLogin(); // correct place of calling, works
                         }
-                        userLogin();
+                        // userLogin();  here the fucntion call is outside the if condition, so it will login the user even if
+                        // the email and password are not set to user input
                       },
                       child: Container(
                           width: MediaQuery.of(context).size.width,
